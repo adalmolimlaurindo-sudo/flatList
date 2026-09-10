@@ -1,3 +1,240 @@
+<<<<<<< HEAD
+import { View, StyleSheet, Text, Image, useWindowDimensions } from 'react-native';
+
+export default function Filme() {
+
+  const { width } = useWindowDimensions();
+
+  const celular = width < 600;
+  const tablet = width >= 600 && width < 1000;
+
+  return (
+    <View
+      style={[
+        styles.descricao,
+
+        celular && styles.descricaoCelular,
+
+        tablet && styles.descricaoTablet
+      ]}
+    >
+      <Image
+        source={{
+          uri: 'https://static1.colliderimages.com/wordpress/wp-content/uploads/sharedimages/2024/04/oppenheimer-poster.jpg'
+        }}
+        style={[
+          styles.imagem,
+
+          celular && styles.imagemCelular,
+
+          tablet && styles.imagemTablet
+        ]}
+        resizeMode="cover"
+      />
+      <View
+        style={[
+          styles.informacoes,
+
+          celular && styles.informacoesCelular
+        ]}
+      >
+
+        <Text
+          style={[
+            styles.filmename,
+
+            celular && styles.filmenameCelular,
+
+            tablet && styles.filmenameTablet
+          ]}
+        >
+          Oppenheimer
+        </Text>
+
+
+        <Text
+          style={[
+            styles.info,
+
+            celular && styles.infoCelular
+          ]}
+        >
+          2023 · +16 · Filme biográfico/Drama · 3h
+        </Text>
+
+
+        <Text
+          style={[
+            styles.texto,
+
+            celular && styles.textoCelular,
+
+            tablet && styles.textoTablet
+          ]}
+        >
+          Oppenheimer, de Christopher Nolan, acompanha a trajetória de J.
+          Robert Oppenheimer, físico teórico e figura central no Projeto
+          Manhattan durante a Segunda Guerra Mundial. Misturando drama
+          histórico e tensão política, o longa explora os dilemas éticos e
+          as consequências pessoais da criação da bomba atômica. Com direção
+          impecável, fotografia marcante e atuações elogiadas, é uma obra
+          intensa e reflexiva, considerada por muitos um dos grandes filmes
+          da década.
+        </Text>
+
+      </View>
+
+    </View>
+  );
+}
+
+
+const styles = StyleSheet.create({
+  descricao: {
+    backgroundColor: '#181818',
+
+    width: '95%',
+    maxWidth: 1400,
+
+    alignSelf: 'center',
+
+    padding: 30,
+    marginTop: 20,
+    marginBottom: 20,
+
+    borderRadius: 8,
+
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
+  imagem: {
+    width: 220,
+    height: 330,
+
+    borderRadius: 8,
+
+    marginRight: 30,
+  },
+  informacoes: {
+    flex: 1,
+
+    paddingTop: 5,
+
+    minWidth: 0,
+  },
+
+
+  filmename: {
+    color: '#f8f8f8',
+
+    fontSize: 30,
+    fontWeight: 'bold',
+
+    marginBottom: 10,
+  },
+
+
+  info: {
+    color: '#aaa',
+
+    fontSize: 16,
+
+    marginBottom: 20,
+
+    flexWrap: 'wrap',
+  },
+
+
+  texto: {
+    color: '#ddd',
+
+    fontSize: 16,
+
+    lineHeight: 24,
+
+    flexShrink: 1,
+  },
+  descricaoCelular: {
+    width: '94%',
+
+    padding: 15,
+
+    marginTop: 10,
+    marginBottom: 10,
+
+    flexDirection: 'column',
+
+    alignItems: 'center',
+  },
+
+
+  imagemCelular: {
+    width: '100%',
+    height: 320,
+
+    marginRight: 0,
+    marginBottom: 18,
+  },
+
+
+  informacoesCelular: {
+    width: '100%',
+
+    paddingTop: 0,
+  },
+
+
+  filmenameCelular: {
+    fontSize: 24,
+
+    marginBottom: 8,
+  },
+
+
+  infoCelular: {
+    fontSize: 13,
+
+    lineHeight: 19,
+
+    marginBottom: 15,
+  },
+
+
+  textoCelular: {
+    fontSize: 14,
+
+    lineHeight: 21,
+
+    textAlign: 'left',
+  },
+  descricaoTablet: {
+    padding: 20,
+
+    width: '92%',
+  },
+
+
+  imagemTablet: {
+    width: 180,
+    height: 270,
+
+    marginRight: 20,
+  },
+
+
+  filmenameTablet: {
+    fontSize: 26,
+  },
+
+
+  textoTablet: {
+    fontSize: 15,
+
+    lineHeight: 22,
+  },
+
+});
+=======
 import React from 'react';
 import {
   View,
@@ -261,3 +498,4 @@ const styles = StyleSheet.create({
   },
 });
 
+>>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
