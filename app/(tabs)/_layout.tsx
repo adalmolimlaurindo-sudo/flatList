@@ -8,23 +8,35 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: true,
         headerStyle: {
-          backgroundColor: "#6e0505ff",
+          backgroundColor: "rgb(93, 0, 7)",
           elevation: 0,
           shadowOpacity: 0,
           borderBottomWidth: 1,
-          borderBottomColor: "#f0f0f0ff",
+<<<<<<< HEAD
+          borderBottomColor: "rgb(250, 245, 245)",
+=======
+          borderBottomColor: "rgb(37, 6, 6)",
+>>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
         },
         headerTitleStyle: {
           fontWeight: "700",
           fontSize: 18,
-          color: "#ffffffff",
+<<<<<<< HEAD
+          color: "rgb(255, 253, 253)",
+=======
+          color: "rgb(254, 248, 248)",
+>>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
         },
-        tabBarActiveTintColor: "#007AFF",
+        tabBarActiveTintColor: "#8f0000",
         tabBarInactiveTintColor: "#8E8E93",
         tabBarStyle: {
-          backgroundColor: "#eff157ff",
+<<<<<<< HEAD
+          backgroundColor: "rgb(0, 0, 0)",
+=======
+          backgroundColor: "rgb(9, 9, 94)",
+>>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
           borderTopWidth: 1,
-          borderTopColor: "#F0F0F0",
+          borderTopColor: "#ffffff",
           height: Platform.OS === "ios" ? 88 : 64,
           paddingBottom: Platform.OS === "ios" ? 30 : 80,
           paddingTop: 10,
@@ -41,105 +53,39 @@ export default function TabLayout() {
           title: "Início",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "home" : "home-outline"}
+              name={focused ? "link" : "eye"}
               size={24}
               color={color}
             />
           ),
         }}
-      />
+      />    
       <Tabs.Screen
-        name="explore"
+        name="filme"
         options={{
-          title: "Explorar",
+<<<<<<< HEAD
+          title: "Filmes",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "search" : "search-outline"}
               size={24}
               color={color}
-            />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
-        name="flex"
-        options={{
-          title: "Flexbox",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? "cube" : "cube-outline"}
-              size={24}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="view"
-        options={{
-          title: "View",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? "menu" : "menu-outline"}
-              size={24}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="image"
-        options={{
-          title: "Imagem",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? "add-circle" : "add"}
-              size={24}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="btnTouch"
-        options={{
-          title: "Botão",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? "add" : "add"}
-              size={24}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="input"
-        options={{
-          title: "Input",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? "add-circle" : "add-circle"}
-              size={24}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="flat"
-        options={{
-          title: "FlatList",
+              link={"/filme"
+                
+              }
+=======
+          title: "TITULO FILME",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "list" : "list-outline"}
               size={24}
               color={color}
+>>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
             />
           ),
         }}
-      />
+      />        
+       
     </Tabs>
   );
 }
