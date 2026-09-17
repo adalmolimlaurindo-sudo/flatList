@@ -12,29 +12,17 @@ export default function TabLayout() {
           elevation: 0,
           shadowOpacity: 0,
           borderBottomWidth: 1,
-<<<<<<< HEAD
-          borderBottomColor: "rgb(250, 245, 245)",
-=======
           borderBottomColor: "rgb(37, 6, 6)",
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
         },
         headerTitleStyle: {
           fontWeight: "700",
           fontSize: 18,
-<<<<<<< HEAD
-          color: "rgb(255, 253, 253)",
-=======
           color: "rgb(254, 248, 248)",
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
         },
-        tabBarActiveTintColor: "#8f0000",
+        tabBarActiveTintColor: "#cc0000",
         tabBarInactiveTintColor: "#8E8E93",
         tabBarStyle: {
-<<<<<<< HEAD
-          backgroundColor: "rgb(0, 0, 0)",
-=======
-          backgroundColor: "rgb(9, 9, 94)",
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
+          backgroundColor: "rgb(93, 0, 7)",
           borderTopWidth: 1,
           borderTopColor: "#ffffff",
           height: Platform.OS === "ios" ? 88 : 64,
@@ -63,24 +51,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="filme"
         options={{
-<<<<<<< HEAD
-          title: "Filmes",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={focused ? "search" : "search-outline"}
-              size={24}
-              color={color}
-              link={"/filme"
-                
-              }
-=======
           title: "TITULO FILME",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "list" : "list-outline"}
               size={24}
               color={color}
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
             />
           ),
         }}

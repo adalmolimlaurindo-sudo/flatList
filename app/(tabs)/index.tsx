@@ -1,6 +1,4 @@
-import { View, StyleSheet, FlatList, Image, Text } from 'react-native';
-import {View, StyleSheet, FlatList, Image} from 'react-native';
-
+import { View, StyleSheet, FlatList, Image, Text, TextImput} from 'react-native';
 
 const categorias = [
   {
@@ -36,132 +34,127 @@ const categorias = [
         titulo: "Saltburn",
         cor: "#1a1a2e",
         imagem: "https://tse1.mm.bing.net/th/id/OIP.Kxlp2q0VwgbDSsi1v92yFwHaK-?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-      },
-      { id: "1a", titulo: "Oppenheimer", cor: "#1a1a2e", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg" },
-      { id: "1b", titulo: "Duna 2", cor: "#16213e", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "1c", titulo: "Barbie", cor: "#0f3460", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "1d", titulo: "Poor Things", cor: "#533483", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "1e", titulo: "Saltburn", cor: "#2b2d42", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-    ],
+      }
+    ]
   },
 
   {
     id: "2",
-    titulo: "Comédia",
+    titulo: "Ação",
     filmes: [
       {
         id: "2a",
-        titulo: "Superbad",
-        cor: "#1a1a2e",
-        imagem: "https://wallpaperaccess.com/full/8848070.jpg"
+        titulo: "John Wick 4",
+        cor: "#1b1b2f",
+        imagem: "https://image.tmdb.org/t/p/original/mj2Z9HnRSIEk3n7yVPoOY4Uzzfh.jpg"
       },
       {
         id: "2b",
-        titulo: "The Grand Budapest",
-        cor: "#1a1a2e",
-        imagem: "https://tse4.mm.bing.net/th/id/OIP.eqw9zTSb2p2SKwaElnbQNQHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+        titulo: "Missão Impossível",
+        cor: "#162447",
+        imagem: "https://m.media-amazon.com/images/S/pv-target-images/9cf4d37563691d4ce4c34e866b3ff015f3a5d52dab3915e284e02fcd6dbe579d.jpg"
       },
       {
         id: "2c",
-        titulo: "Gente grande",
-        cor: "#1a1a2e",
-        imagem: "https://m.media-amazon.com/images/M/MV5BZjEzM2U4NTQtNTdmMi00MDU1LWEzM2YtODcwNDkzZWE5YjhlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+        titulo: "Top Gun",
+        cor: "#1f4068",
+        imagem: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg"
       },
-    titulo: "Ação",
-    filmes: [
-      { id: "2a", titulo: "John Wick 4", cor: "#1b1b2f", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "2b", titulo: "Missão Impossível", cor: "#162447", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "2c", titulo: "Top Gun", cor: "#1f4068", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "2d", titulo: "Mad Max", cor: "#1b262c", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-    ],
-  },
-  {
-    id: "3",
-    titulo: "Comédia",
-    filmes: [
-      { id: "3a", titulo: "Superbad", cor: "#2d132c", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "3b", titulo: "The Grand Budapest", cor: "#1c3334", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "3c", titulo: "Knives Out", cor: "#2c003e", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-    ],
+      {
+        id: "2d",
+        titulo: "Mad Max",
+        cor: "#1b262c",
+        imagem: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a6277c169328487.644a87f7d7f4f.jpg"
+      }
+    ]
   },
 
   {
     id: "3",
-    titulo: "Romance",
+    titulo: "Comédia",
     filmes: [
       {
         id: "3a",
+        titulo: "Superbad",
+        cor: "#2d132c",
+        imagem: "https://wallpaperaccess.com/full/8848070.jpg"
+      },
+      {
+        id: "3b",
+        titulo: "The Grand Budapest",
+        cor: "#1c3334",
+        imagem: "https://tse4.mm.bing.net/th/id/OIP.eqw9zTSb2p2SKwaElnbQNQHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      },
+      {
+        id: "3c",
+        titulo: "Gente Grande",
+        cor: "#1a1a2e",
+        imagem: "https://m.media-amazon.com/images/M/MV5BZjEzM2U4NTQtNTdmMi00MDU1LWEzM2YtODcwNDkzZWE5YjhlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+      }
+    ]
+  },
+
+  {
+    id: "4",
+    titulo: "Romance",
+    filmes: [
+      {
+        id: "4a",
         titulo: "Off Campus",
         cor: "#1a1a2e",
         imagem: "https://tse2.mm.bing.net/th/id/OIP.Td9lGGgeXGjQv0LcRYK9ogAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
       },
       {
-        id: "3b",
-        titulo: "Como eu era antes de você",
+        id: "4b",
+        titulo: "Como Eu Era Antes de Você",
         cor: "#1a1a2e",
         imagem: "https://m.media-amazon.com/images/I/61io1vJIWFL._SL1000_.jpg"
       },
       {
-        id: "3c",
-        titulo: "A cinco passos de você",
+        id: "4c",
+        titulo: "A Cinco Passos de Você",
         cor: "#1a1a2e",
         imagem: "https://www.atoupeira.com.br/wp-content/uploads/2019/03/a-cinco-passos-de-voce-poster-critica.png"
-      },
-    ],
+      }
+    ]
   },
 
-  {
-    id: "4",
-    titulo: "Ação",
-    filmes: [
-<<<<<<< HEAD
-      {
-        id: "4a",
-        titulo: "Venom",
-        cor: "#1a1a2e",
-        imagem: "https://th.bing.com/th/id/R.93202e30662671af9861dc865e217668?rik=37Krs5mykMJiRg&pid=ImgRaw&r=0"
-      },
-      {
-        id: "4b",
-        titulo: "Vingadores: Ultimato",
-        cor: "#1a1a2e",
-        imagem: "https://br.web.img3.acsta.net/pictures/19/04/26/17/30/2428965.jpg"
-      },
-      {
-        id: "4c",
-        titulo: "Matrix",
-        cor: "#1a1a2e",
-        imagem: "https://totallyhistory.com/wp-content/uploads/2023/05/The-Matrix-Movie-Poster-235x353.jpg"
-      },
-=======
-      { id: "4a", titulo: "Free Solo", cor: "#0d0d0d", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "4b", titulo: "The Social Dilemma", cor: "#001011", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "4c", titulo: "My Octopus Teacher", cor: "#002b36", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-    ],
-  },
   {
     id: "5",
     titulo: "Terror",
     filmes: [
-      { id: "5a", titulo: "Hereditary", cor: "#200122", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "5b", titulo: "Midsommar", cor: "#190a05", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
-      { id: "5c", titulo: "Get Out", cor: "#0a0a0a", imagem:"https://mir-s3-cdn-cf.behance.net/project_modules/1400/5c3c44212930411.673d9fef7aad7.jpg"  },
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
-    ],
+      {
+        id: "5a",
+        titulo: "Hereditary",
+        cor: "#200122",
+        imagem: "https://tse4.mm.bing.net/th/id/OIP.DjEEFeE4_Dc05dSBB2GfwAAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+        
+      },
+      {
+        id: "5b",
+        titulo: "Midsommar",
+        cor: "#190a05",
+        imagem: "https://www.ecured.cu/images/c/cd/Midsommar-121406730-large.jpg"
+      },
+      {
+        id: "5c",
+        titulo: "Get Out",
+        cor: "#0a0a0a",
+        imagem: "https://images.moviesanywhere.com/1eac8b1747c905f18fbc228725204309/1406b595-0ac4-4bd7-90c4-65113b6b157a.jpg"
+      }
+    ]
   }
 ];
 
 export default function App() {
-<<<<<<< HEAD
   return (
     <View style={styles.app}>
-
       <FlatList
         data={categorias}
         keyExtractor={(item) => item.id}
         renderItem={renderCategoria}
+        showsVerticalScrollIndicator={false}
       />
-
     </View>
   );
 }
@@ -177,10 +170,9 @@ function renderCategoria({ item }: { item: any }) {
       <FlatList
         data={item.filmes}
         keyExtractor={(filme) => filme.id}
-        horizontal={true}
+        horizontal
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 10 }}
-
+        contentContainerStyle={styles.listaFilmes}
         renderItem={({ item }) => (
           <View
             style={[
@@ -188,69 +180,24 @@ function renderCategoria({ item }: { item: any }) {
               { backgroundColor: item.cor }
             ]}
           >
-
-            {item.imagem !== "" ? (
-              <Image
-                source={{ uri: item.imagem }}
-                style={styles.filme}
-                resizeMode="cover"
-              />
-            ) : (
-              <Text style={styles.nomeFilme}>
-                {item.titulo}
-              </Text>
-            )}
-
+            <Image
+              source={{ uri: item.imagem }}
+              style={styles.filme}
+              resizeMode="cover"
+            />
           </View>
         )}
       />
 
     </View>
   );
-=======
-    return (
-        <View style={styles.corFundo}>
-            <FlatList
-                        data={categorias}
-                        keyExtractor={item => item.id}
-                        renderItem={renderCategoria}
-                    />
-        </View>
-    );
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
-}
-
-
-function renderCategoria({item}:{item:any}){
-  return(
-    <View style={styles.categorias}>
-    {item.titulo}
-    <FlatList
-      data={item.filmes}
-      keyExtractor={filme=>filme.id}
-      horizontal={true}
-      // showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{paddingBottom:40}}
-      renderItem={({item})=>(
-          <Image
-          source={{uri:item.imagem}}
-          style={[styles.filme]}
-          >             
-          </Image>
-          
-        )}
-      > </FlatList>
-      
-    </View>
-  )
 }
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD
 
   app: {
-    backgroundColor: "#000000",
     flex: 1,
+    backgroundColor: "#000000",
   },
 
   categorias: {
@@ -267,6 +214,10 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
 
+  listaFilmes: {
+    paddingBottom: 10,
+  },
+
   filmeTitulo: {
     width: 150,
     height: 200,
@@ -280,34 +231,4 @@ const styles = StyleSheet.create({
     height: "100%",
   },
 
-  nomeFilme: {
-    color: "#ffffff",
-    fontSize: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-
 });
-=======
-       categorias:{
-        color:"white",
-        backgroundColor: '#000000'
-       },
-       corFundo:{
-        flex:1,
-        backgroundColor:"black"
-       },
-       filme:{
-        width:100,
-        height:140,
-        borderRadius:8,
-        margin: 5,        
-        justifyContent:'flex-end',
-        padding:8
-       },
-       filmeTitulo:{
-        color:'white',
-        fontSize:12
-       }
-});
->>>>>>> 866e24725a84234383018a0cd1f4d22c6efd2041
