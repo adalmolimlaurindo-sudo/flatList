@@ -1,5 +1,5 @@
 import { Stack, useLocalSearchParams } from "expo-router";
-import { View, } from "react-native";
+import { View } from "react-native";
 
 export default function pesquisa() {
     const { buscar } = useLocalSearchParams();
