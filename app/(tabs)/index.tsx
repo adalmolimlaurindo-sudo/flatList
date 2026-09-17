@@ -1,4 +1,6 @@
-import { View, StyleSheet, FlatList, Image, Text, TextImput} from 'react-native';
+import { View, StyleSheet, FlatList, Image, Text, TextInput} from 'react-native';
+import { Pressable } from "react-native";
+import { router } from "expo-router";
 
 const categorias = [
   {
@@ -149,6 +151,10 @@ const categorias = [
 export default function App() {
   return (
     <View style={styles.app}>
+      <TextInput
+        placeholder="Pesquisar" 
+        style={styles.input}
+      />
       <FlatList
         data={categorias}
         keyExtractor={(item) => item.id}
@@ -174,18 +180,19 @@ function renderCategoria({ item }: { item: any }) {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.listaFilmes}
         renderItem={({ item }) => (
-          <View
-            style={[
-              styles.filmeTitulo,
-              { backgroundColor: item.cor }
+          <Pressable
+             onPress={() => router.push(`/filme/${item.id}`)}
+             style={[
+             styles.filmeTitulo,
+             { backgroundColor: item.cor }
             ]}
           >
             <Image
-              source={{ uri: item.imagem }}
-              style={styles.filme}
-              resizeMode="cover"
+             source={{ uri: item.imagem }}
+             style={styles.filme}
+             resizeMode="cover"
             />
-          </View>
+          </Pressable>
         )}
       />
 
@@ -230,5 +237,14 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  input: {
+    backgroundColor: "#1a1a2e",
+    color: "#ffffff",
+    borderColor: "#000000",
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 10,
+    margin: 10,
+  }
 
 });
